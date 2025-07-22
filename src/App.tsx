@@ -69,7 +69,7 @@ export const Home = () => (
   <div className='relative h-screen flex flex-col items-center justify-center text-center bg-black text-white p-8'>
     <div>
       <img
-        src='images/truthonaut-logo.png'
+        src='images/watercolor-truthonaut.jpg'
         alt='Truthonaut Logo'
         className='mx-auto mb-6 w-24 h-24 object-contain'
       />
