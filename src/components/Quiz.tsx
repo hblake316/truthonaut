@@ -149,7 +149,9 @@ const Quiz: React.FC = () => {
             borderRadius: '8px',
             padding: '24px',
             border:
-              '1px solid rgba(99, 102, 241, 0.2)'
+              '1px solid rgba(99, 102, 241, 0.2)',
+            boxShadow:
+              '0 0 20px rgba(132, 204, 22, 0.1)'
           }}
         >
           <h3
@@ -192,19 +194,26 @@ const Quiz: React.FC = () => {
                     cursor: 'pointer',
                     transition:
                       'all 0.2s',
-                    fontSize: '16px'
+                    fontSize: '16px',
+                    position: 'relative'
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.backgroundColor =
                       'rgba(99, 102, 241, 0.2)'
                     e.currentTarget.style.borderColor =
                       'rgba(99, 102, 241, 0.5)'
+                    e.currentTarget.style.boxShadow =
+                      index % 2 === 0
+                        ? '0 0 15px rgba(132, 204, 22, 0.3)'
+                        : '0 0 15px rgba(236, 72, 153, 0.3)'
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.backgroundColor =
                       'rgba(99, 102, 241, 0.1)'
                     e.currentTarget.style.borderColor =
                       'rgba(99, 102, 241, 0.3)'
+                    e.currentTarget.style.boxShadow =
+                      'none'
                   }}
                 >
                   {option}

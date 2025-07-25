@@ -8,7 +8,9 @@ const Footer: React.FC = () => {
         backgroundColor:
           'rgba(15, 15, 35, 0.6)',
         borderTop:
-          '1px solid rgba(99, 102, 241, 0.2)'
+          '1px solid rgba(99, 102, 241, 0.2)',
+        boxShadow:
+          '0 -4px 20px rgba(132, 204, 22, 0.1)'
       }}
     >
       <div className='w-full max-w-6xl mx-auto'>
@@ -40,14 +42,18 @@ const Footer: React.FC = () => {
                 style={{
                   color: '#94a3b8'
                 }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.color =
-                    '#e2e8f0')
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.color =
-                    '#94a3b8')
-                }
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color =
+                    '#ec4899'
+                  e.currentTarget.style.transform =
+                    'scale(1.1)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color =
+                    '#94a3b8'
+                  e.currentTarget.style.transform =
+                    'scale(1)'
+                }}
               >
                 <span className='sr-only'>
                   Twitter
@@ -65,14 +71,18 @@ const Footer: React.FC = () => {
                 style={{
                   color: '#94a3b8'
                 }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.color =
-                    '#e2e8f0')
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.color =
-                    '#94a3b8')
-                }
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color =
+                    '#ec4899'
+                  e.currentTarget.style.transform =
+                    'scale(1.1)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color =
+                    '#94a3b8'
+                  e.currentTarget.style.transform =
+                    'scale(1)'
+                }}
               >
                 <span className='sr-only'>
                   Discord
@@ -271,7 +281,9 @@ const Footer: React.FC = () => {
           className='text-center mt-8 pt-8'
           style={{
             borderTop:
-              '1px solid rgba(99, 102, 241, 0.2)'
+              '1px solid rgba(99, 102, 241, 0.2)',
+            boxShadow:
+              '0 -2px 10px rgba(132, 204, 22, 0.05)'
           }}
         >
           <p

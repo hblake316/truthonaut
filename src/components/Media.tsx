@@ -55,26 +55,33 @@ const Media: React.FC = () => {
                   padding: '24px',
                   border:
                     '1px solid rgba(99, 102, 241, 0.2)',
-                  transition: 'all 0.2s'
+                  transition:
+                    'all 0.2s',
+                  boxShadow:
+                    '0 0 20px rgba(132, 204, 22, 0.08)'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor =
                     'rgba(26, 26, 46, 0.9)'
                   e.currentTarget.style.borderColor =
                     'rgba(99, 102, 241, 0.4)'
+                  e.currentTarget.style.boxShadow =
+                    '0 0 25px rgba(132, 204, 22, 0.15)'
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor =
                     'rgba(26, 26, 46, 0.8)'
                   e.currentTarget.style.borderColor =
                     'rgba(99, 102, 241, 0.2)'
+                  e.currentTarget.style.boxShadow =
+                    '0 0 20px rgba(132, 204, 22, 0.08)'
                 }}
               >
                 <div className='flex items-center justify-between mb-3'>
                   <span
                     className='text-sm font-semibold'
                     style={{
-                      color: '#a5b4fc'
+                      color: '#84cc16'
                     }}
                   >
                     {item.type}
@@ -92,7 +99,7 @@ const Media: React.FC = () => {
                 <h3
                   className='text-xl font-semibold mb-2'
                   style={{
-                    color: '#e2e8f0'
+                    color: '#ec4899'
                   }}
                 >
                   {item.title}
@@ -108,16 +115,32 @@ const Media: React.FC = () => {
                 <button
                   className='font-medium text-sm transition-colors'
                   style={{
-                    color: '#ec4899'
+                    color: 'white',
+                    backgroundColor:
+                      '#6366f1',
+                    border:
+                      '1px solid #6366f1',
+                    borderRadius: '6px',
+                    padding: '4px 8px',
+                    textShadow:
+                      '0 0 8px rgba(99, 102, 241, 0.3)'
                   }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.color =
-                      '#f472b6')
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.color =
-                      '#ec4899')
-                  }
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor =
+                      '#4f46e5'
+                    e.currentTarget.style.borderColor =
+                      '#4f46e5'
+                    e.currentTarget.style.textShadow =
+                      '0 0 12px rgba(99, 102, 241, 0.5)'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor =
+                      '#6366f1'
+                    e.currentTarget.style.borderColor =
+                      '#6366f1'
+                    e.currentTarget.style.textShadow =
+                      '0 0 8px rgba(99, 102, 241, 0.3)'
+                  }}
                 >
                   Read More →
                 </button>
