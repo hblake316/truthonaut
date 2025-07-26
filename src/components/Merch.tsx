@@ -1,20 +1,20 @@
 import React from 'react'
+import merchShirt from '../assets/merch-shirt.png'
+import mugImage from '../assets/shop/mug/white-ceramic-mug-with-color-inside-green-11-oz-left-688441137901d.jpg'
 
 const Merch: React.FC = () => {
   const merchItems = [
     {
       name: 'Truthonaut T-Shirt',
       price: '$24.99',
-      image:
-        '/src/assets/merch-shirt.png',
+      image: merchShirt,
       description:
         'Comfortable cotton tee with the Truthonaut logo'
     },
     {
       name: 'Truthonaut Mug',
       price: '$14.99',
-      image:
-        '/src/assets/shop/mug/white-ceramic-mug-with-color-inside-green-11-oz-left-688441137901d.jpg',
+      image: mugImage,
       description:
         'Decode. Declassify. Drink.'
     }
