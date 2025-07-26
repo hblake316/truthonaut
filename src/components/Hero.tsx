@@ -10,12 +10,17 @@ const Hero: React.FC = () => {
       }}
     >
       {/* Banner Image */}
-      <div className='w-full min-h-48 md:min-h-[500px] overflow-hidden'>
+      <div className='w-full min-h-48 md:min-h-[500px] overflow-hidden relative'>
         <img
           src='/truthonaut-banner.jpg'
-          alt='Truthonaut Banner'
+          alt='Truthonaut'
           className='w-full h-full object-cover'
         />
+        <div className='absolute top-4 right-4 md:top-6 md:right-6'>
+          <h1 className='text-lg md:text-2xl font-bold text-white drop-shadow-lg'>
+            TRUTHONAUT
+          </h1>
+        </div>
       </div>
 
       {/* Hero Content */}
