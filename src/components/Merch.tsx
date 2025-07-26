@@ -1,6 +1,5 @@
 import React from 'react'
 import merchShirt from '../assets/merch-shirt.png'
-import mugImage from '../assets/shop/mug/white-ceramic-mug-with-color-inside-green-11-oz-left-688441137901d.jpg'
 
 const Merch: React.FC = () => {
   const merchItems = [
@@ -14,7 +13,7 @@ const Merch: React.FC = () => {
     {
       name: 'Truthonaut Mug',
       price: '$14.99',
-      image: mugImage,
+      image: '/mug.jpg',
       description:
         'Decode. Declassify. Drink.'
     }
