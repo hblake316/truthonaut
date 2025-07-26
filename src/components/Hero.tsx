@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
       {/* Banner Image */}
       <div className='w-full min-h-48 md:min-h-[500px] overflow-hidden'>
         <img
-          src='/src/assets/truthonaut-2.jpg'
+          src='/truthonaut-banner.jpg'
           alt='Truthonaut Banner'
           className='w-full h-full object-cover'
         />
