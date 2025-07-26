@@ -3,26 +3,27 @@ import React from 'react'
 const Media: React.FC = () => {
   const mediaItems = [
     {
-      title: 'The Art of Questioning',
+      title:
+        'Truthonaut Log 001: Transdimensional Mapping',
       description:
-        'Learn how to ask better questions to uncover deeper truths',
-      type: 'Article',
-      readTime: '5 min read'
+        "I joined remote viewer Birdie Jaworski for a deep-dive into non-local consciousness. No spoilers—but let's just say the map isn't the territory… and the territory might not be physical at all. This log captures the process, impressions, and the strange familiarity of exploring a target with no coordinates—just intent.",
+      type: 'Substack',
+      readTime: 'by Truthonaut'
+    },
+    {
+      title: 'The Simulated Multiverse',
+      description:
+        "Are we living one life—or all of them at once?\nIn this mind-bender follow-up to The Simulation Hypothesis, MIT's Rizwan Virk dives deeper into the idea that we're in a rendered reality—like a cosmic video game running infinite timelines in parallel. Quantum theory, simulation logic, and sci-fi-level thinking collide as he explores how multiple realities, Mandela effects, and time glitches might actually be code-level features of our universe.",
+      type: 'Book',
+      duration: 'by Rizwan Virk'
     },
     {
       title:
-        'Cognitive Biases in Truth-Seeking',
+        'The Man Who Attracts UFOs - Chris Bledsoe - Full Documentary',
       description:
-        'Understanding the mental shortcuts that can lead us astray',
-      type: 'Video',
-      duration: '12 min'
-    },
-    {
-      title: 'Evidence-Based Thinking',
-      description:
-        'A practical guide to evaluating claims and evidence',
+        "Glowing orbs. Lost time. Government eyes everywhere.\nChris Bledsoe's encounters go way beyond UFOs—mysterious beings, messages from \"The Lady,\" and deep-state interest collide in a story that's part contact, part cover-up. This doc dives into the full case: abductions, regressions, and secrets nobody's supposed to know.",
       type: 'Podcast',
-      duration: '45 min'
+      duration: 'from AREA 52'
     }
   ]
 
@@ -35,12 +36,41 @@ const Media: React.FC = () => {
       }}
     >
       <div className='w-full max-w-6xl mx-auto'>
-        <h2
-          className='text-3xl font-bold text-center mb-12'
-          style={{ color: '#e2e8f0' }}
+        <p
+          className='text-xs text-center mb-2'
+          style={{
+            color: '#84cc16',
+            fontFamily:
+              'Orbitron, monospace'
+          }}
         >
-          Explore & Learn
+          // FILE ACCESS: DECLASSIFIED
+        </p>
+        <h2
+          className='text-3xl font-bold text-center mb-2'
+          style={{
+            color: '#e2e8f0',
+            fontFamily:
+              'Orbitron, monospace'
+          }}
+        >
+          DEBRIEF CONSOLE: ACTIVE
         </h2>
+        <p
+          className='text-sm text-center mb-12'
+          style={{
+            color: '#94a3b8',
+            fontFamily:
+              'Orbitron, monospace'
+          }}
+        >
+          last updated:{' '}
+          <span
+            style={{ color: '#84cc16' }}
+          >
+            {new Date().toLocaleDateString()}
+          </span>
+        </p>
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
           {mediaItems.map(
             (item, index) => (
@@ -112,38 +142,136 @@ const Media: React.FC = () => {
                 >
                   {item.description}
                 </p>
-                <button
-                  className='font-medium text-sm transition-colors'
-                  style={{
-                    color: 'white',
-                    backgroundColor:
-                      '#6366f1',
-                    border:
-                      '1px solid #6366f1',
-                    borderRadius: '6px',
-                    padding: '4px 8px',
-                    textShadow:
-                      '0 0 8px rgba(99, 102, 241, 0.3)'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor =
-                      '#4f46e5'
-                    e.currentTarget.style.borderColor =
-                      '#4f46e5'
-                    e.currentTarget.style.textShadow =
-                      '0 0 12px rgba(99, 102, 241, 0.5)'
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor =
-                      '#6366f1'
-                    e.currentTarget.style.borderColor =
-                      '#6366f1'
-                    e.currentTarget.style.textShadow =
-                      '0 0 8px rgba(99, 102, 241, 0.3)'
-                  }}
-                >
-                  Read More →
-                </button>
+                {item.type ===
+                'Book' ? (
+                  <a
+                    href='https://a.co/d/ab9dd3b'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='font-medium text-sm transition-colors inline-block'
+                    style={{
+                      color: 'white',
+                      backgroundColor:
+                        '#6366f1',
+                      border:
+                        '1px solid #6366f1',
+                      borderRadius:
+                        '6px',
+                      padding:
+                        '4px 8px',
+                      textShadow:
+                        '0 0 8px rgba(99, 102, 241, 0.3)',
+                      textDecoration:
+                        'none'
+                    }}
+                    onMouseEnter={(
+                      e
+                    ) => {
+                      e.currentTarget.style.backgroundColor =
+                        '#4f46e5'
+                      e.currentTarget.style.borderColor =
+                        '#4f46e5'
+                      e.currentTarget.style.textShadow =
+                        '0 0 12px rgba(99, 102, 241, 0.5)'
+                    }}
+                    onMouseLeave={(
+                      e
+                    ) => {
+                      e.currentTarget.style.backgroundColor =
+                        '#6366f1'
+                      e.currentTarget.style.borderColor =
+                        '#6366f1'
+                      e.currentTarget.style.textShadow =
+                        '0 0 8px rgba(99, 102, 241, 0.3)'
+                    }}
+                  >
+                    Buy the Book
+                  </a>
+                ) : item.type ===
+                  'Podcast' ? (
+                  <a
+                    href='https://youtu.be/vQqErgnc_3g?si=usKBpT72Q5VuZtCv'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='font-medium text-sm transition-colors inline-block'
+                    style={{
+                      color: 'white',
+                      backgroundColor:
+                        '#6366f1',
+                      border:
+                        '1px solid #6366f1',
+                      borderRadius:
+                        '6px',
+                      padding:
+                        '4px 8px',
+                      textShadow:
+                        '0 0 8px rgba(99, 102, 241, 0.3)',
+                      textDecoration:
+                        'none'
+                    }}
+                    onMouseEnter={(
+                      e
+                    ) => {
+                      e.currentTarget.style.backgroundColor =
+                        '#4f46e5'
+                      e.currentTarget.style.borderColor =
+                        '#4f46e5'
+                      e.currentTarget.style.textShadow =
+                        '0 0 12px rgba(99, 102, 241, 0.5)'
+                    }}
+                    onMouseLeave={(
+                      e
+                    ) => {
+                      e.currentTarget.style.backgroundColor =
+                        '#6366f1'
+                      e.currentTarget.style.borderColor =
+                        '#6366f1'
+                      e.currentTarget.style.textShadow =
+                        '0 0 8px rgba(99, 102, 241, 0.3)'
+                    }}
+                  >
+                    Watch the Episode
+                  </a>
+                ) : (
+                  <button
+                    className='font-medium text-sm transition-colors'
+                    style={{
+                      color: 'white',
+                      backgroundColor:
+                        '#6366f1',
+                      border:
+                        '1px solid #6366f1',
+                      borderRadius:
+                        '6px',
+                      padding:
+                        '4px 8px',
+                      textShadow:
+                        '0 0 8px rgba(99, 102, 241, 0.3)'
+                    }}
+                    onMouseEnter={(
+                      e
+                    ) => {
+                      e.currentTarget.style.backgroundColor =
+                        '#4f46e5'
+                      e.currentTarget.style.borderColor =
+                        '#4f46e5'
+                      e.currentTarget.style.textShadow =
+                        '0 0 12px rgba(99, 102, 241, 0.5)'
+                    }}
+                    onMouseLeave={(
+                      e
+                    ) => {
+                      e.currentTarget.style.backgroundColor =
+                        '#6366f1'
+                      e.currentTarget.style.borderColor =
+                        '#6366f1'
+                      e.currentTarget.style.textShadow =
+                        '0 0 8px rgba(99, 102, 241, 0.3)'
+                    }}
+                  >
+                    Read More →
+                  </button>
+                )}
               </div>
             )
           )}
@@ -174,7 +302,7 @@ const Media: React.FC = () => {
                 '#6366f1')
             }
           >
-            Browse All Content
+            Open the Archive
           </button>
         </div>
       </div>

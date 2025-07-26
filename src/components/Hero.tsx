@@ -10,28 +10,33 @@ const Hero: React.FC = () => {
       }}
     >
       {/* Banner Image */}
-      <div className='w-full min-h-48 md:min-h-[500px] overflow-hidden relative'>
+      <div className='w-full min-h-48 md:min-h-[500px] overflow-hidden'>
         <img
           src='/truthonaut-banner.jpg'
           alt='Truthonaut'
           className='w-full h-full object-cover'
         />
-        <div className='absolute top-4 right-4 md:top-6 md:right-6'>
-          <h1 className='text-lg md:text-2xl font-bold text-white drop-shadow-lg'>
-            TRUTHONAUT
-          </h1>
-        </div>
       </div>
 
       {/* Hero Content */}
       <div className='py-12 px-4 text-center'>
         <div className='w-full max-w-none mx-auto'>
+          <h1
+            className='text-3xl md:text-4xl font-bold mb-3 tracking-widest word-break: break-all'
+            style={{
+              color: '#e2e8f0',
+              fontFamily:
+                'Orbitron, monospace'
+            }}
+          >
+            TRUTHONAUT
+          </h1>
           <p
-            className='text-xl md:text-2xl mb-8 max-w-2xl mx-auto'
+            className='text-xl md:text-2xl mb-6 max-w-2xl mx-auto'
             style={{ color: '#94a3b8' }}
           >
-            Embark on a journey of
-            discovery and truth-seeking.
+            A Gamified Path for Cosmic
+            Explorers and Truth Seekers
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <button
@@ -58,7 +63,8 @@ const Hero: React.FC = () => {
                   '#6366f1')
               }
             >
-              Start Your Journey
+              Unlock your Truthonaut
+              Rank
             </button>
             <button
               style={{

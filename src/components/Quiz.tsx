@@ -7,26 +7,30 @@ const Quiz: React.FC = () => {
   ] = useState(0)
   const [answers, setAnswers] =
     useState<number[]>([])
+  const [
+    selectedTier,
+    setSelectedTier
+  ] = useState<string>('')
 
   const questions = [
     {
       question:
-        'What drives your quest for truth?',
+        'What pulls you toward the unknown?',
       options: [
-        'Curiosity',
-        'Skepticism',
-        'Open-mindedness',
-        'All of the above'
+        "A need to understand what's hidden",
+        "A feeling that I've been here before",
+        'Because something out there is calling me',
+        'I want to witness what others deny is real'
       ]
     },
     {
       question:
-        'How do you approach conflicting information?',
+        'When you encounter something unexplainable, how do you respond?',
       options: [
-        'Research multiple sources',
-        'Trust authority figures',
-        'Follow intuition',
-        'Avoid the conflict'
+        'I stay present and observe without judgment.',
+        'I analyze it—I need to understand the mechanics.',
+        'I act on it—I share, record, or use it to guide others.',
+        'I reflect on it and listen inwardly.'
       ]
     },
     {
@@ -50,6 +54,33 @@ const Quiz: React.FC = () => {
     ]
     setAnswers(newAnswers)
 
+    // Store tier based on question answers
+    if (currentQuestion === 0) {
+      const tierMap = {
+        0: 'decoder',
+        1: 'dreamwalker',
+        2: 'activator',
+        3: 'observer'
+      }
+      setSelectedTier(
+        tierMap[
+          answerIndex as keyof typeof tierMap
+        ]
+      )
+    } else if (currentQuestion === 1) {
+      const tierMap = {
+        0: 'observer',
+        1: 'decoder',
+        2: 'activator',
+        3: 'dreamwalker'
+      }
+      setSelectedTier(
+        tierMap[
+          answerIndex as keyof typeof tierMap
+        ]
+      )
+    }
+
     if (
       currentQuestion <
       questions.length - 1
@@ -62,6 +93,10 @@ const Quiz: React.FC = () => {
       console.log(
         'Quiz completed:',
         newAnswers
+      )
+      console.log(
+        'Selected tier:',
+        selectedTier
       )
     }
   }
@@ -95,6 +130,7 @@ const Quiz: React.FC = () => {
             onClick={() => {
               setCurrentQuestion(0)
               setAnswers([])
+              setSelectedTier('')
             }}
             style={{
               backgroundColor:
@@ -135,12 +171,38 @@ const Quiz: React.FC = () => {
       }}
     >
       <div className='w-full max-w-2xl mx-auto'>
-        <h2
-          className='text-3xl font-bold text-center mb-8'
-          style={{ color: '#e2e8f0' }}
+        <p
+          className='text-xs text-center mb-2'
+          style={{
+            color: '#84cc16',
+            fontFamily:
+              'Orbitron, monospace'
+          }}
         >
-          Truth Seeker Quiz
+          // ACCESSING MAINFRAME: RANK
+          SEQUENCE LOADED
+        </p>
+        <h2
+          className='text-3xl font-bold text-center mb-2'
+          style={{
+            color: '#e2e8f0',
+            fontFamily:
+              'Orbitron, monospace'
+          }}
+        >
+          TRUTHONAUT RANK CONSOLE
         </h2>
+        <p
+          className='text-sm text-center mb-8'
+          style={{
+            color: '#94a3b8',
+            fontFamily:
+              'Orbitron, monospace'
+          }}
+        >
+          Begin assessment to determine
+          your Truthonaut tier.
+        </p>
         <div
           style={{
             backgroundColor:

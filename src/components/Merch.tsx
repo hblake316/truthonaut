@@ -11,20 +11,12 @@ const Merch: React.FC = () => {
         'Comfortable cotton tee with the Truthonaut logo'
     },
     {
-      name: 'Truth Seeker Mug',
+      name: 'Truthonaut Mug',
       price: '$14.99',
       image:
-        '/src/assets/merch-mug.png',
+        '/src/assets/shop/mug/white-ceramic-mug-with-color-inside-green-11-oz-left-688441137901d.jpg',
       description:
-        'Start your day with a reminder to seek truth'
-    },
-    {
-      name: 'Knowledge Poster',
-      price: '$19.99',
-      image:
-        '/src/assets/merch-poster.png',
-      description:
-        'Beautiful poster with truth-seeking quotes'
+        'Decode. Declassify. Drink.'
     }
   ]
 
@@ -37,12 +29,38 @@ const Merch: React.FC = () => {
       }}
     >
       <div className='w-full max-w-6xl mx-auto'>
-        <h2
-          className='text-3xl font-bold text-center mb-12'
-          style={{ color: '#e2e8f0' }}
+        <p
+          className='text-xs text-center mb-2'
+          style={{
+            color: '#84cc16',
+            fontFamily:
+              'Orbitron, monospace'
+          }}
         >
-          Truthonaut Merch
+          // FIELD OPS EQUIPMENT: READY
+          FOR DEPLOYMENT
+        </p>
+        <h2
+          className='text-3xl font-bold text-center mb-2'
+          style={{
+            color: '#e2e8f0',
+            fontFamily:
+              'Orbitron, monospace'
+          }}
+        >
+          FIELD GEAR CONSOLE
         </h2>
+        <p
+          className='text-sm text-center mb-12'
+          style={{
+            color: '#94a3b8',
+            fontFamily:
+              'Orbitron, monospace'
+          }}
+        >
+          high-vibe goods for field
+          missions
+        </p>
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {merchItems.map(
             (item, index) => (
@@ -79,26 +97,37 @@ const Merch: React.FC = () => {
                     '0 0 20px rgba(132, 204, 22, 0.08)'
                 }}
               >
-                <div
-                  className='h-48 flex items-center justify-center'
-                  style={{
-                    background:
-                      'linear-gradient(135deg, #6366f1 0%, #4f46e5 50%, #3730a3 100%)'
-                  }}
-                >
+                {item.name ===
+                'Truthonaut Mug' ? (
+                  <div className='h-64 flex items-center justify-center overflow-hidden'>
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className='w-full h-full object-cover'
+                    />
+                  </div>
+                ) : (
                   <div
-                    className='text-4xl font-bold opacity-20'
+                    className='h-64 flex items-center justify-center'
                     style={{
-                      color: '#e2e8f0'
+                      background:
+                        'linear-gradient(135deg, #6366f1 0%, #4f46e5 50%, #3730a3 100%)'
                     }}
                   >
-                    {
-                      item.name.split(
-                        ' '
-                      )[0]
-                    }
+                    <div
+                      className='text-4xl font-bold opacity-20'
+                      style={{
+                        color: '#e2e8f0'
+                      }}
+                    >
+                      {
+                        item.name.split(
+                          ' '
+                        )[0]
+                      }
+                    </div>
                   </div>
-                </div>
+                )}
                 <div className='p-6'>
                   <h3
                     className='text-xl font-semibold mb-2'
@@ -125,38 +154,128 @@ const Merch: React.FC = () => {
                     >
                       {item.price}
                     </span>
-                    <button
-                      style={{
-                        backgroundColor:
-                          '#6366f1',
-                        color: 'white',
-                        padding:
-                          '8px 16px',
-                        borderRadius:
-                          '8px',
-                        fontWeight:
-                          '600',
-                        border: 'none',
-                        cursor:
-                          'pointer',
-                        transition:
-                          'background-color 0.2s'
-                      }}
-                      onMouseEnter={(
-                        e
-                      ) =>
-                        (e.currentTarget.style.backgroundColor =
-                          '#4f46e5')
-                      }
-                      onMouseLeave={(
-                        e
-                      ) =>
-                        (e.currentTarget.style.backgroundColor =
-                          '#6366f1')
-                      }
-                    >
-                      Add to Cart
-                    </button>
+                    {item.name ===
+                    'Truthonaut T-Shirt' ? (
+                      <a
+                        href='https://www.bonfire.com/truthonaut-tee/'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        style={{
+                          backgroundColor:
+                            '#6366f1',
+                          color:
+                            'white',
+                          padding:
+                            '8px 16px',
+                          borderRadius:
+                            '8px',
+                          fontWeight:
+                            '600',
+                          border:
+                            'none',
+                          cursor:
+                            'pointer',
+                          transition:
+                            'background-color 0.2s',
+                          textDecoration:
+                            'none',
+                          display:
+                            'inline-block'
+                        }}
+                        onMouseEnter={(
+                          e
+                        ) =>
+                          (e.currentTarget.style.backgroundColor =
+                            '#4f46e5')
+                        }
+                        onMouseLeave={(
+                          e
+                        ) =>
+                          (e.currentTarget.style.backgroundColor =
+                            '#6366f1')
+                        }
+                      >
+                        View Item
+                      </a>
+                    ) : item.name ===
+                      'Truthonaut Mug' ? (
+                      <a
+                        href='https://truthonaut.printful.me/product/truthonaut-mug-decode-declassify-drink'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        style={{
+                          backgroundColor:
+                            '#6366f1',
+                          color:
+                            'white',
+                          padding:
+                            '8px 16px',
+                          borderRadius:
+                            '8px',
+                          fontWeight:
+                            '600',
+                          border:
+                            'none',
+                          cursor:
+                            'pointer',
+                          transition:
+                            'background-color 0.2s',
+                          textDecoration:
+                            'none',
+                          display:
+                            'inline-block'
+                        }}
+                        onMouseEnter={(
+                          e
+                        ) =>
+                          (e.currentTarget.style.backgroundColor =
+                            '#4f46e5')
+                        }
+                        onMouseLeave={(
+                          e
+                        ) =>
+                          (e.currentTarget.style.backgroundColor =
+                            '#6366f1')
+                        }
+                      >
+                        View Item
+                      </a>
+                    ) : (
+                      <button
+                        style={{
+                          backgroundColor:
+                            '#6366f1',
+                          color:
+                            'white',
+                          padding:
+                            '8px 16px',
+                          borderRadius:
+                            '8px',
+                          fontWeight:
+                            '600',
+                          border:
+                            'none',
+                          cursor:
+                            'pointer',
+                          transition:
+                            'background-color 0.2s'
+                        }}
+                        onMouseEnter={(
+                          e
+                        ) =>
+                          (e.currentTarget.style.backgroundColor =
+                            '#4f46e5')
+                        }
+                        onMouseLeave={(
+                          e
+                        ) =>
+                          (e.currentTarget.style.backgroundColor =
+                            '#6366f1')
+                        }
+                      >
+                        View Item
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
@@ -169,10 +288,13 @@ const Merch: React.FC = () => {
             className='mb-4'
             style={{ color: '#94a3b8' }}
           >
-            Support the truth-seeking
-            community
+            Issued to all active
+            Truthonauts.
           </p>
-          <button
+          <a
+            href='https://truthonaut.printful.me/'
+            target='_blank'
+            rel='noopener noreferrer'
             style={{
               backgroundColor:
                 '#6366f1',
@@ -185,7 +307,9 @@ const Merch: React.FC = () => {
               transition:
                 'background-color 0.2s',
               boxShadow:
-                '0 4px 6px rgba(99, 102, 241, 0.3)'
+                '0 4px 6px rgba(99, 102, 241, 0.3)',
+              textDecoration: 'none',
+              display: 'inline-block'
             }}
             onMouseEnter={(e) =>
               (e.currentTarget.style.backgroundColor =
@@ -196,8 +320,8 @@ const Merch: React.FC = () => {
                 '#6366f1')
             }
           >
-            View All Products
-          </button>
+            Access All Gear
+          </a>
         </div>
       </div>
     </section>
